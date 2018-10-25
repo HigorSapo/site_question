@@ -42,7 +42,7 @@ class Empresa_model extends CI_Model
 		$data = array(
 			'login'        => $this->login,
 			'senha'        => $this->senha,
-			'nome_empresa' => utf8_decode($this->nomeEmpresa),
+			'nome_empresa' => $this->nomeEmpresa,
 			'cnpj'         => $this->cnpj,
 			'cep'          => $this->cep,
 			'endereco'     => $this->endereco,

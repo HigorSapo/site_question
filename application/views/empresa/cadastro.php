@@ -196,6 +196,12 @@
 															<input type="text" class="form-control" id="telefone" name="telefone" value="" required="" placeholder="">
 														</div>
 													</div>
+													<div class="col-md-12 col-lg-12">
+														<div class="form-group">
+															<label for="url" class="control-label">Site da empresa</label>
+															<input type="text" class="form-control" id="url" name="url" value="" required="" placeholder="">
+														</div>
+													</div>
 												</div>
 										  </form>
 										</div>
@@ -279,6 +285,7 @@
 				var nEmpresa     = $("#n-mepresa").val();
 				var complemento  = $("#complemento").val();
 				var telefone     = $("#telefone").val();
+				var urlCliente   = $("#url").val();
 
 				if (login == '') {
 					$("#alerta-cadastro").html("Preencha o campo login");
@@ -363,7 +370,8 @@
 						uf          : uf,
 						numero      : nEmpresa,
 						complemento : complemento,
-						telefone    : telefone
+						telefone    : telefone,
+						urlCliente  : urlCliente
 		              },
 		              beforeSend: function() {
 		                  $("#bt-salvar").attr('disabled', true);

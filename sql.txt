@@ -14,3 +14,5 @@ create table empresa
 	complemento varchar(150),
 	telefone varchar(20)
 );
+
+alter table empresa add url_cliente varchar(200);

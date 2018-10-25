@@ -15,6 +15,7 @@ class Empresa_model extends CI_Model
 	private $numero;
 	private $complemento;
 	private $telefone;
+	private $urlCliente;
 
 	public function __construct()
 	{
@@ -33,6 +34,7 @@ class Empresa_model extends CI_Model
 		$this->numero      = isset($_POST['numero']) ? $_POST['numero'] : '';
 		$this->complemento = isset($_POST['complemento']) ? $_POST['complemento'] : '';
 		$this->telefone    = isset($_POST['telefone']) ? $_POST['telefone'] : '';
+		$this->urlCliente  = isset($_POST['urlCliente']) ? $_POST['urlCliente'] : '';
 	}
 
 	public function setEmpresa()
@@ -49,7 +51,8 @@ class Empresa_model extends CI_Model
 			'uf'           => $this->uf,
 			'numero'       => $this->numero,
 			'complemento'  => $this->complemento,
-			'telefone'     => $this->telefone
+			'telefone'     => $this->telefone,
+			'url_cliente'  => $this->urlCliente
 		);
 
 		$this->db->insert('empresa', $data);

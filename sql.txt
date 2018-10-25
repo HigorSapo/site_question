@@ -1,0 +1,16 @@
+create table empresa
+(
+	id int(11) auto_increment primary key,
+	login varchar(50) not null,
+	senha varchar(100) not null,
+	nome_empresa varchar(150),
+	cnpj varchar(20),
+	cep varchar(15),
+	endereco varchar(100),
+	cidade varchar(100),
+	bairro varchar(100),
+	uf varchar(2),
+	numero varchar(10),
+	complemento varchar(150),
+	telefone varchar(20)
+);

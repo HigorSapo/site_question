@@ -78,9 +78,15 @@
 					<div class="container">
 						<ul class="nav">
 							<li class="nav-item">
-								<a class="nav-link" href="widgets.html">
+								<a class="nav-link" href="<?=base_url('empresa/cadastro')?>">
 									<i class="fas fa-address-card"></i>
 									<span>Cadastro</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?=base_url('sistema')?>">
+									<i class="fas fa-sign-in-alt"></i>
+									<span>Acesso ao sistema</span>
 								</a>
 							</li>
 						</ul>
@@ -263,7 +269,7 @@
 				var login        = $("#login").val();
 				var senha        = $("#senha").val();
 				var senhaB       = $("#senhaB").val();
-				var nomeEmpressa = $("#nome-empresa").val();
+				var nomeEmpresa = $("#nome-empresa").val();
 				var cnpj         = $("#cnpj").val();
 				var cep          = $("#cep").val();
 				var endereco     = $("#endereco").val();
@@ -294,7 +300,7 @@
 					$("#alerta-cadastro").show();
 					return false;
 				}
-				if (nomeEmpressa == '') {
+				if (nomeEmpresa == '') {
 					$("#alerta-cadastro").html("Preencha o nome da empresa");
 					$("#alerta-cadastro").show();
 					return false;
@@ -355,7 +361,7 @@
 						cidade      : cidade,
 						bairro      : bairro,
 						uf          : uf,
-						numero      : numero,
+						numero      : nEmpresa,
 						complemento : complemento,
 						telefone    : telefone
 		              },

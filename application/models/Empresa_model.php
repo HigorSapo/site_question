@@ -39,6 +39,7 @@ class Empresa_model extends CI_Model
 
 	public function setEmpresa()
 	{
+		$this->nomeEmpresa = utf8_encode($this->nomeEmpresa);
 		$data = array(
 			'login'        => $this->login,
 			'senha'        => $this->senha,
